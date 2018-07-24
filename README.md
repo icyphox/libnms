@@ -11,5 +11,7 @@ Clone this repository and run `nimble install` in your checkout.
 Example usage:
 ```Nim
 import libnms
+
+nms_auto_decrypt(1)
 echo nms_exec("hello world")
 ```
