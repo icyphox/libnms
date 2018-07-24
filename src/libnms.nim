@@ -1,5 +1,5 @@
 # path to libnms.so
-const libnmsdll = "lib/libnms.so"
+const libnmsdll = "/usr/local/lib/libnms.so"
 
 {.pragma: libnms, importc, dynlib: libnmsdll.}
 
