@@ -17,10 +17,10 @@ echo nms_exec("hello world")
 ```
 ## Procs
 
-`nms_exec*(s: cstring): cstring`  
-`nms_set_auto_decrypt*(i: cint)`  
-`nms_set_foreground_color*(s: cstring)`  
-`nms_set_clear_scr*(i: cint)`  
-`nms_use_color*(i: cint)`  
-`nms_set_return_opts*(s: cstring)`  
-`nms_set_input_position*(i1: cint, i2: cint)`  
+`nms_exec*(a1: cstring): cstring`  
+`nms_set_auto_decrypt*(a1: cint)`  
+`nms_set_foreground_color*(a1: cstring)`  
+`nms_set_clear_scr*(a1: cint)`  
+`nms_use_color*(a1: cint)`  
+`nms_set_return_opts*(a1: cstring)`  
+`nms_set_input_position*(a1: cint, a2: cint)`  
