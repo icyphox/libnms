@@ -1,5 +1,14 @@
 # path to libnms.so
-const libnmsdll = "/usr/local/lib/libnms.so"
+{.deadCodeElim: on.}
+when defined(windows):
+  const
+    libnmsdll* = "nms.dll"
+elif defined(macosx):
+  const
+    libnmsdll* = "libnms.dylib"
+else:
+  const
+    libnmsdll* = "libnms.so"
 
 {.pragma: libnms, importc, dynlib: libnmsdll.}
 
