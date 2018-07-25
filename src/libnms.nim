@@ -10,13 +10,15 @@ else:
   const
     libnmsdll* = "libnms.so"
 
-{.pragma: libnms, importc, dynlib: libnmsdll.}
-
 # procs from libnms.so
-proc nms_exec*(s: cstring): cstring {.libnms.}
-proc nms_set_auto_decrypt*(i: cint) {.libnms.}
-proc nms_set_foreground_color*(s: cstring) {.libnms.}
-proc nms_set_clear_scr*(i: cint) {.libnms.}
-proc nms_use_color*(i: cint) {.libnms.}
-proc nms_set_return_opts*(s: cstring) {.libnms.}
-proc nms_set_input_position*(i1: cint, i2: cint) {.libnms.}
+proc nms_exec*(a1: cstring): cstring {.cdecl, importc: "nms_exec", dynlib: libnmsdll.}
+proc nms_set_foreground_color*(a1: cstring) {.cdecl,
+    importc: "nms_set_foreground_color", dynlib: libnmsdll.}
+proc nms_set_return_opts*(a1: cstring) {.cdecl, importc: "nms_set_return_opts",
+                                      dynlib: libnmsdll.}
+proc nms_set_auto_decrypt*(a1: cint) {.cdecl, importc: "nms_set_auto_decrypt",
+                                    dynlib: libnmsdll.}
+proc nms_set_clear_scr*(a1: cint) {.cdecl, importc: "nms_set_clear_scr", dynlib: libnmsdll.}
+proc nms_use_color*(a1: cint) {.cdecl, importc: "nms_use_color", dynlib: libnmsdll.}
+proc nms_set_input_position*(a1: cint; a2: cint) {.cdecl, importc: "nms_set_input_position", dynlib: libnmsdll.}
+
